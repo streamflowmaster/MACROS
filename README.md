@@ -37,8 +37,18 @@ Unlike approaches that adapt general foundation models, MACROS is engineered fro
 - **Hierarchical Integration & Joint Training** — Agents are unified in a hierarchical framework and jointly trained on ~105 million simulated spectra–structure pairs.
 - **Fine-Tuning on Real Data** — Final adaptation to experimental variability using unassigned real-world spectra.
 
-### Checkpoints
-General Pretrain checkpoint — Broad simulated pretraining
-Human Metabolism checkpoint — Fine-tuned for human metabolites
-Natural Product checkpoint — Adapted for complex natural products (>800 Da)
-Organic Chemistry checkpoint — General-purpose for synthetic/reaction products
+## Checkpoints
+
+The following checkpoints are (or will be) available, each optimized for different application domains:
+
+- **General Pretrain checkpoint**  
+  Broad simulated pretraining — foundation model trained on the full ~105M simulated spectra–structure pairs
+
+- **Human Metabolism checkpoint**  
+  Fine-tuned for human metabolites — enhanced performance on endogenous small molecules and metabolic pathways
+
+- **Natural Product checkpoint**  
+  Adapted for complex natural products (>800 Da) — optimized for large, structurally intricate molecules from natural sources
+
+- **Organic Chemistry checkpoint**  
+  General-purpose for synthetic / reaction products — suited for small-to-medium synthetic organic compounds and reaction mixtures
