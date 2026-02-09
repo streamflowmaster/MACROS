@@ -1,6 +1,3 @@
-<p align="center">
-  <img src="https://img.shields.io/badge/MACROS-Multi-Agent Closed-Loop Reasoning for Organic Structure-6A1B9A?style=for-the-badge&logo=chemistry&logoColor=white" alt="MACROS Badge">
-</p>
 
 <h1 align="center">MACROS</h1>
 
