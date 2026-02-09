@@ -1,0 +1,43 @@
+# yaml file
+out_dir: 'hnmr_spectra_multiset_large_1'
+tasks: 'hnmr_self_supervised_peaks'
+eval_interval: 200
+log_interval: 200
+eval_iters: 10
+eval_only: False
+use_categories_jvalue: False
+always_save_checkpoint: True
+init_from: 'resume' # 'scratch' #
+wandb_log: False
+wandb_project: 'pretrain_spectra'
+wandb_run_name: 'pretrain_spectra_1'
+gradient_accumulation_steps: 4
+batch_size: 1000
+block_size: 1024
+n_layer: 48
+n_head: 12
+n_embd: 768
+n_patchsize: 16
+signal_length: 512
+dropout: 0.1
+bias: False
+learning_rate: 0.0001
+max_iters: 100000
+weight_decay: 0.1
+beta1: 0.9
+beta2: 0.999
+grad_clip: 1.0
+decay_lr: True
+warmup_iters: 200
+lr_decay_iters: 1000
+min_lr: 0.00001
+backend: 'nccl'
+device: 'cuda:2'
+dtype: 'bfloat16'
+compile: False
+config_keys: ['out_dir', 'eval_interval', 'log_interval', 'eval_iters', 'eval_only', 'always_save_checkpoint', 'init_from', 'wandb_log', 'wandb_project', 'wandb_run_name', 'gradient_accumulation_steps', 'batch_size', 'block_size', 'n_layer', 'n_head', 'n_embd', 'n_patchsize', 'signal_length', 'dropout', 'bias', 'learning_rate', 'max_iters', 'weight_decay', 'beta1', 'beta2', 'grad_clip', 'decay_lr', 'warmup_iters', 'lr_decay_iters', 'min_lr', 'backend', 'device', 'dtype', 'compile', 'config_keys', 'gpu_ids', 'device_type', 'num_workers']
+gpu_ids: [1]
+device_type: 'cuda'
+num_workers: 4
+data_path: '../dataset_[HNMR_CNMR_HSQCNMR_IR_Mol]/input.yaml'
+dp: False
