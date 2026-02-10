@@ -1,4 +1,8 @@
+<p align="center">
+  <img src="https://github.com/streamflowmaster/MACROS/raw/main/assets/macros-logo.png" alt="MACROS Logo" width="400">
+</p>
 
+<h1 align="center">MACROS</h1>
 <h1 align="center">MACROS</h1>
 
 <p align="center">
