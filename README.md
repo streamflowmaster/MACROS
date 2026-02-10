@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <strong>Multi-Agent Closed-Loop Reasoning for Organic Structure Elucidation</strong><br>
+  <strong>MACROS: Multi-Agent Closed-Loop Reasoning for Organic Structure Elucidation</strong><br>
   <em>Autonomous structure determination from routine multimodal spectra: ¹H NMR, ¹³C NMR, HSQC, and IR</em>
 </p>
 
