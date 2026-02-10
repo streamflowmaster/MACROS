@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/streamflowmaster/MACROS/raw/main/assets/BANNER-2.png" alt="MACROS Logo" width="800">
+  <img src="https://github.com/streamflowmaster/MACROS/raw/main/assets/macros-logo.png" alt="MACROS Logo" width="800">
 </p>
 
 <p align="center">
@@ -19,9 +19,8 @@
 </p>
 
 <p align="center">
-  <img src="https://via.placeholder.com/1200x500/1a0033/00ffaa?text=MACROS+-+Agentic+Reasoning+for+Spectroscopic+Structure+Elucidation" alt="MACROS Banner">
-  <!-- Recommended: replace with a generated image showing multi-agent loop + spectra + molecule -->
-</p>
+  <img src="https://github.com/streamflowmaster/MACROS/raw/main/assets/BANNER-2.png" alt="MACROS Logo" width="800">
+</p
 
 ## Overview
 
