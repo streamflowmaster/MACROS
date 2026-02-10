@@ -1,8 +1,6 @@
-<p align="left">
+<p align="center">
   <img src="https://github.com/streamflowmaster/MACROS/raw/main/assets/macros-logo.png" alt="MACROS Logo" width="200">
 </p>
-
-<h1 align="center">MACROS</h1>
 
 <p align="center">
   <strong>Multi-Agent Closed-Loop Reasoning for Organic Structure Elucidation</strong><br>
