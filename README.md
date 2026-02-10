@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/streamflowmaster/MACROS/raw/main/assets/macros-logo.png" alt="MACROS Logo" width="200">
+  <img src="https://github.com/streamflowmaster/MACROS/raw/main/assets/BANNER-2.png" alt="MACROS Logo" width="200">
 </p>
 
 <p align="center">
