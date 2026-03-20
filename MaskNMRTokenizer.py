@@ -136,8 +136,8 @@ class NMRSpectrumTokenizer:
                 self.CONFIG['h_nmr_jvalue_max'] - self.CONFIG['h_nmr_jvalue_min']) + self.CONFIG['h_nmr_jvalue_min']
 
     def intensity_discrete_reverse(self, intensity):
-        intensity -= self.special_token_num
-        return intensity / self.CONFIG['c_nmr_intensity_disc'] * (
+        # intensity -=
+        return (intensity-self.special_token_num) / self.CONFIG['c_nmr_intensity_disc'] * (
                 self.CONFIG['c_nmr_intensity_max'] - self.CONFIG['c_nmr_intensity_min']) + self.CONFIG[
             'c_nmr_intensity_min']
 
@@ -177,9 +177,9 @@ class NMRSpectrumTokenizer:
             # Extract relevant data (skip BOS, stop before EOS)
             delta = delta[1:eos_pos]
             delta_value = self.delta_discrete_reverse(delta)
+
             intensity = spectra_dict[1][batch_id][1:eos_pos]
             intensity_value = self.intensity_discrete_reverse(intensity)
-
             # Create spectrum entries
             for i in range(len(delta)):
                 entry = {'delta (ppm)': delta_value[i].cpu().item()}
@@ -359,6 +359,17 @@ class NMRSpectrumTokenizer:
                 continue
             # Fill data
             peaks = spec['c_nmr_peaks']
+            if peaks == self.missing_identification:
+                peaks = sorted(peaks, key=lambda x: x['delta (ppm)'], reverse=True)
+                seen = set()
+                c_unique = []
+                for p in peaks:
+                    delta = p['delta (ppm)']
+                    if delta not in seen:
+                        seen.add(delta)
+                        c_unique.append(p)
+                peaks = c_unique
+
             if isinstance(peaks, str):
                 if peaks == self.missing_identification:
                     encoded_spectra.append(self.missing_identification)
@@ -415,6 +426,13 @@ class NMRSpectrumTokenizer:
                 continue
             # Fill data
             peaks = spec['h_nmr_peaks']
+            if peaks == self.missing_identification:
+                peaks = sorted(
+                    peaks,
+                    key=lambda x: x['centroid'],
+                    reverse=True
+                )
+
             if isinstance(peaks, str):
                 if peaks == self.missing_identification:
                     encoded_spectra.append(self.missing_identification)

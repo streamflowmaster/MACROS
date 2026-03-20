@@ -155,6 +155,9 @@ class Block(nn.Module):
         attn_mask=None,     # ← 新增
         is_causal=True      # ← 新增
     ):
+        # print('use_mask attention')
+        # print('Atten_Weight:',self.attn.c_attn.weight)
+        # print(use_cache, return_cache,is_causal,x)
         # 把 attn_mask 和 is_causal 透传下去
         x = x + self.attn(
             self.ln_1(x),
