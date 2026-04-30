@@ -36,7 +36,7 @@ Unlike approaches that adapt general foundation models, MACROS is engineered fro
 
 ## Checkpoints
 
-The following checkpoints are (or will be) available, each optimized for different application domains:
+The following checkpoints are (or will be) available at https://huggingface.co/StreamFlow520/MACROS, each optimized for different application domains:
 
 - **General Pretrain checkpoint**  
   Broad simulated pretraining — foundation model trained on the full ~105M simulated spectra–structure pairs
